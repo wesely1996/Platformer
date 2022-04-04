@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9ff7b6d3f7b623449afcfb7c506c3cc7
+guid: 542d54cfee695064985afc1330ba2685
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -114,68 +114,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: spikes_2_0
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 8, y: 12}
-        - {x: 1, y: -9}
-        - {x: -4, y: 12}
-        - {x: -8, y: 12}
-        - {x: -12.5, y: 2}
-        - {x: -15.5, y: -16}
-        - {x: 16, y: -16}
-        - {x: 15, y: -2}
-        - {x: 12, y: 12}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6da74c753fb02d94bb78d9f735222ec8
-      internalID: 1548781209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spikes_2_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 8, y: 14}
-        - {x: 0, y: -10}
-        - {x: -5, y: 12}
-        - {x: -9, y: 12}
-        - {x: -12, y: 2}
-        - {x: -15, y: -7}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 15, y: -3}
-        - {x: 11, y: 14}
-      tessellationDetail: 0
-      bones: []
-      spriteID: f727135ea4424c74a9f6348564ea9767
-      internalID: -1512273483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -186,9 +125,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      spikes_2_1: -1512273483
-      spikes_2_0: 1548781209
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

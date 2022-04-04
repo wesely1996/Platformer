@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9ff7b6d3f7b623449afcfb7c506c3cc7
+guid: eeb1568f9e330b142b2e93b72dfbc607
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,62 +116,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spikes_2_0
+      name: lava_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
+        x: 3
+        y: 2
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 8, y: 12}
-        - {x: 1, y: -9}
-        - {x: -4, y: 12}
-        - {x: -8, y: 12}
-        - {x: -12.5, y: 2}
-        - {x: -15.5, y: -16}
-        - {x: 16, y: -16}
-        - {x: 15, y: -2}
-        - {x: 12, y: 12}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6da74c753fb02d94bb78d9f735222ec8
-      internalID: 1548781209
+      spriteID: 9a92ba7a7df9ed940bb9e5ff704630c9
+      internalID: -1684764827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spikes_2_1
+      name: lava_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 36
+        y: 2
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 8, y: 14}
-        - {x: 0, y: -10}
-        - {x: -5, y: 12}
-        - {x: -9, y: 12}
-        - {x: -12, y: 2}
-        - {x: -15, y: -7}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 15, y: -3}
-        - {x: 11, y: 14}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f727135ea4424c74a9f6348564ea9767
-      internalID: -1512273483
+      spriteID: 25b83df1d07117d41a85a81cb0c1da65
+      internalID: -37008615
       vertices: []
       indices: 
       edges: []
@@ -187,8 +168,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spikes_2_1: -1512273483
-      spikes_2_0: 1548781209
+      lava_1: -37008615
+      lava_0: -1684764827
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

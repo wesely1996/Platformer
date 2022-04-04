@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 3f;
     [SerializeField] float climbSpeed = 5f;
+    [SerializeField] Vector2 deathKick = new Vector2(0f, 10f);
+    [SerializeReference] GameObject arrow;
+    [SerializeReference] Transform bow;
 
     Vector2 moveInput;
     Rigidbody2D rb2d;
@@ -16,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D feetCollider;
     float gravity;
 
+    bool isAlive = true;
+    bool canFire = true;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -27,21 +33,31 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Run();
-        ClimbLadder();
+        if (isAlive)
+        {
+            Run();
+            ClimbLadder();
+            Die();
+        }
     }
 
     void OnMove(InputValue value)
     {
-        moveInput = value.Get<Vector2>();
-        FlipSprite();
+        if (isAlive)
+        {
+            moveInput = value.Get<Vector2>();
+            FlipSprite();
+        }
     }
 
     void OnJump(InputValue value)
     {
-        if (value.isPressed && feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        if (isAlive)
         {
-            rb2d.velocity += new Vector2(0f, jumpSpeed);
+            if (value.isPressed && feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+            {
+                rb2d.velocity += new Vector2(0f, jumpSpeed);
+            }
         }
     }
 
@@ -77,5 +93,43 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isClimbing", false);
             rb2d.gravityScale = gravity;
         }
+    }
+
+    void Die()
+    {
+        if (bodyColldier.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazard")))
+        {
+            isAlive = false;
+            animator.SetTrigger("isDead");
+            GetComponent<SpriteRenderer>().color = Color.red;
+            rb2d.velocity = deathKick;
+            Invoke("PlayerLostLife", 2);
+        }
+    }
+
+    void PlayerLostLife()
+    {
+        FindObjectOfType<LevelManager>().ProcessPlayerDeath();
+    }
+
+    void OnFire(InputValue value)
+    {
+        if (isAlive && canFire)
+        {
+            canFire = false;
+            animator.SetTrigger("isShooting");
+            Invoke("FireArrow", 0.3f);
+        }
+    }
+
+    void FireArrow()
+    {
+        Instantiate(arrow, bow.position, transform.rotation);
+        Invoke("ResetFire", 0.3f);
+    }
+
+    void ResetFire()
+    {
+        canFire = true;
     }
 }
