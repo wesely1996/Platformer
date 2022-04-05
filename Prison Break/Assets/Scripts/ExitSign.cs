@@ -14,6 +14,7 @@ public class ExitSign : MonoBehaviour
 
     void NextLevel()
     {
+        Destroy(FindObjectOfType<LevelPersist>().gameObject);
         if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         else

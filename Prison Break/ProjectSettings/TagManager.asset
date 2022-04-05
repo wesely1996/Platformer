@@ -21,7 +21,7 @@ TagManager:
   - Hazard
   - Arrow
   - Exit
-  - 
+  - Interactable
   - 
   - 
   - 
@@ -57,6 +57,9 @@ TagManager:
     locked: 0
   - name: Ladder
     uniqueID: 53251395
+    locked: 0
+  - name: Interactable
+    uniqueID: 1447380635
     locked: 0
   - name: Hazards
     uniqueID: 2108910179
